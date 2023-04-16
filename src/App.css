@@ -1,0 +1,90 @@
+:root {
+  --size: 80px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.game-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#fff, #ddd);
+}
+
+.game-title {
+  font-size: calc(var(--size) / 1.8);
+  font-family: "Poppins", sans-serif;
+}
+
+.Board {
+  display: inline-grid;
+  list-style: none;
+  padding: calc(var(--size) / 4);
+  gap: calc(var(--size) / 4);
+  grid-template-columns: repeat(3, var(--size));
+  grid-template-rows: repeat(3, var(--size));
+  border: 0.4em solid #000;
+}
+
+.Slot {
+  /* width: 100%;
+  height: 100%; */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.Slot:hover {
+  outline: 0.4em solid #aaa;
+}
+
+.Slot-img {
+  width: 100%;
+}
+
+.turn-marker-container {
+  padding-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.turn-marker {
+  width: calc(var(--size) * 2);
+  display: inline-block;
+  padding: 15px;
+  border: 0.35em solid #000;
+}
+
+.turn-marker-img {
+  width: 35%;
+  padding: 10px 0;
+}
+
+.turn-marker-text {
+  padding: 10px 0;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.winner-marker-container {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.winner-marker-text {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
